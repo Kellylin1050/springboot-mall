@@ -1,6 +1,7 @@
 package com.kelly.springbootmall.controller;
 
 import com.kelly.springbootmall.constant.ProductCategory;
+import com.kelly.springbootmall.dto.ProductQueryParams;
 import com.kelly.springbootmall.dto.ProductRequest;
 import com.kelly.springbootmall.model.Product;
 import com.kelly.springbootmall.service.ProductService;
@@ -20,10 +21,16 @@ public class ProductController {
 
     @GetMapping("/products") //查詢商品列表
     public ResponseEntity<List<Product>> getProducts(
+            // 查詢條件 Filtering
            @RequestParam(required = false) ProductCategory category,
            @RequestParam(required = false) String search
     ){
-        List<Product> productList = productService.getProducts(category,search);
+
+        ProductQueryParams productQueryParams = new ProductQueryParams();
+        productQueryParams.setCategory(category);
+        productQueryParams.setSearch(search);
+
+        List<Product> productList = productService.getProducts(productQueryParams);
 
         return ResponseEntity.status(HttpStatus.OK).body(productList);
     }
