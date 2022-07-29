@@ -1,12 +1,20 @@
 package com.kelly.springbootmall.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 
 public class User {
 
     private Integer userId;
+
+    //@JsonProperty("e_mail") //改key的名字
     private String email;
+
+    @JsonIgnore //轉換格式會忽略(隱藏密碼)
     private String password;
+
     private Date createdDate;
     private Date lastModifiedDate;
 
