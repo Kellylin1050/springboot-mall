@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>商品</title>
+</head>
+<body>
+<p></p>商品清單<p></p>
+
+<table>
+    <tr>
+        <th>product_id</th>
+        <th>product_name</th>
+        <th>category</th>
+        <th>image_url</th>
+        <th>price</th>
+        <th>stock</th>
+        <th>description</th>
+        <th>created_date</th>
+        <th>last_modified_date</th>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>蘋果（澳洲）</td>
+        <td>FOOD</td>
+        <td><img src="https://cdn.pixabay.com/photo/2016/11/30/15/00/apples-1872997_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 30 </td>
+        <td> 10 </td>
+        <td>這是來自澳洲的蘋果！</td>
+        <td>2022-03-19 17:00:00</td>
+        <td>2022-03-22 18:00:00</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>蘋果（日本北海道）</td>
+        <td>FOOD</td>
+        <td><img src="https://cdn.pixabay.com/photo/2017/09/26/13/42/apple-2788662_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 300 </td>
+        <td> 5 </td>
+        <td>這是來自日本北海道的蘋果！</td>
+        <td>2022-03-19 18:30:00</td>
+        <td>2022-03-19 18:30:00</td>
+
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>好吃又鮮甜的蘋果橘子</td>
+        <td>FOOD</td>
+        <td><img src="https://cdn.pixabay.com/photo/2021/07/30/04/17/orange-6508617_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 10 </td>
+        <td> 50 </td>
+        <td>NULL</td>
+        <td>2022-03-20 09:00:00</td>
+        <td>2022-03-24 15:00:00</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Toyota</td>
+        <td>CAR</td>
+        <td><img src="https://cdn.pixabay.com/photo/2014/05/18/19/13/toyota-347288_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 100000 </td>
+        <td>  5 </td>
+        <td>NULL</td>
+        <td>2022-03-20 09:20:00</td>
+        <td>2022-03-20 09:20:00</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>BMW</td>
+        <td>CAR</td>
+        <td><img src="https://cdn.pixabay.com/photo/2018/02/21/03/15/bmw-m4-3169357_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 500000 </td>
+        <td>  3 </td>
+        <td>渦輪增壓，直列4缸，DOHC雙凸輪軸，16氣門</td>
+        <td>2022-03-20 12:30:00</td>
+        <td>2022-03-20 12:30:00</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Benz</td>
+        <td>CAR</td>
+        <td><img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 600000 </td>
+        <td>  20 </td>
+        <td>NULL</td>
+        <td>2022-03-21 20:10:00</td>
+        <td>2022-08-02 16:33:02</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Tesla</td>
+        <td>CAR</td>
+        <td><img src="https://cdn.pixabay.com/photo/2021/01/15/16/49/tesla-5919764_1280.jpg" width="300" heigh="200" alt="圖片"></td>
+        <td> 450000 </td>
+        <td>  10 </td>
+        <td>世界最暢銷的充電式汽車</td>
+        <td>2022-03-21 23:30:00</td>
+        <td>2022-08-02 16:33:02</td>
+    </tr>
+</table>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="登出"/>
+</form>
+</body>
+</html>

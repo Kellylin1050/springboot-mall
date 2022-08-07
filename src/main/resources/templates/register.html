@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+     <form th:action="@{/register}" method="post">
+          <div>註冊</div>
+          <div><label>帳號：<input id="username" required="required"/></label></div>
+          <div><label>密碼：<input id="password" type="password" required="required"/></label></div>
+          <div><input type="submit" value="註冊"/></div>
+     </form>
+
+

@@ -19,6 +19,7 @@ import java.util.List;
 
 @Validated
 @RestController
+@CrossOrigin(origins = "*")
 public class ProductController {
 
     @Autowired

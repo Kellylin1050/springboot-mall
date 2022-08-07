@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example </title>
+</head>
+
+<form th:action="@{/auth/qrcode}" method="get">
+    <div>驗證</div>
+    <div><label> 驗證碼：<input type="code" name="code"/> </label></div>
+    <div><input type="submit" value="驗證"/></div>
+</form>
